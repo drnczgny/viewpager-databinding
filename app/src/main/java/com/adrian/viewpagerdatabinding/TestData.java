@@ -1,7 +1,7 @@
 package com.adrian.viewpagerdatabinding;
 
 
-import com.adrian.viewpagerdatabinding.model.DataModel;
+import com.adrian.viewpagerdatabinding.common.viewpager.model.DataModel;
 import com.adrian.viewpagerdatabinding.viewmodel.FirstViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.SecondViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.ThirdViewModel;

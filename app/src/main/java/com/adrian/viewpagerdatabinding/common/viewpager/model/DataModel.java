@@ -1,16 +1,12 @@
-package com.adrian.viewpagerdatabinding.model;
+package com.adrian.viewpagerdatabinding.common.viewpager.model;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-
-import com.adrian.viewpagerdatabinding.BR;
-import com.adrian.viewpagerdatabinding.viewmodel.RVViewModel;
+import com.adrian.viewpagerdatabinding.viewmodel.base.RVViewModel;
 
 /**
  * Created by cadri on 2017. 04. 08..
  */
 
-public class DataModel extends BaseObservable {
+public class DataModel {
 
     private RVViewModel rvViewModel;
 
@@ -18,13 +14,11 @@ public class DataModel extends BaseObservable {
         this.rvViewModel = rvViewModel;
     }
 
-    @Bindable
     public RVViewModel getRvViewModel() {
         return rvViewModel;
     }
 
     public void setRvViewModel(RVViewModel rvViewModel) {
         this.rvViewModel = rvViewModel;
-        notifyPropertyChanged(BR.rvViewModel);
     }
 }

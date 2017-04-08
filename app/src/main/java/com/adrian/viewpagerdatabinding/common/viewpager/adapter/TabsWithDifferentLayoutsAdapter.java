@@ -1,4 +1,4 @@
-package com.adrian.viewpagerdatabinding;
+package com.adrian.viewpagerdatabinding.common.viewpager.adapter;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.adrian.viewpagerdatabinding.databinding.ViewpagerItemLayout1Binding;
-import com.adrian.viewpagerdatabinding.model.DataModel;
+import com.adrian.viewpagerdatabinding.common.viewpager.model.DataModel;
 
 import java.util.List;
 

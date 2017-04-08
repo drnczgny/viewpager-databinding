@@ -1,4 +1,4 @@
-package com.adrian.viewpagerdatabinding.common;
+package com.adrian.viewpagerdatabinding.common.recyclerview;
 
 import android.databinding.BaseObservable;
 

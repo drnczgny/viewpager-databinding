@@ -1,4 +1,4 @@
-package com.adrian.viewpagerdatabinding.viewmodel;
+package com.adrian.viewpagerdatabinding.viewmodel.base;
 
 import android.databinding.BaseObservable;
 

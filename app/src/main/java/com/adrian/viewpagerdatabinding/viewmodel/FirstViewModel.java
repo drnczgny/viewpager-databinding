@@ -3,6 +3,7 @@ package com.adrian.viewpagerdatabinding.viewmodel;
 import android.databinding.Bindable;
 
 import com.adrian.viewpagerdatabinding.BR;
+import com.adrian.viewpagerdatabinding.viewmodel.base.RVViewModel;
 
 /**
  * Created by cadri on 2017. 04. 08..
