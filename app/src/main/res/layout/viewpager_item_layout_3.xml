@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.adrian.viewpagerdatabinding.viewmodel.SecondViewModel" />
+            type="com.adrian.viewpagerdatabinding.viewmodel.third.ThirdViewModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

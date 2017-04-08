@@ -1,4 +1,4 @@
-package com.adrian.viewpagerdatabinding.viewmodel;
+package com.adrian.viewpagerdatabinding.viewmodel.first;
 
 import android.databinding.Bindable;
 

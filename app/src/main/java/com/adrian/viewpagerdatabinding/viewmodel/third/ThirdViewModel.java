@@ -1,4 +1,4 @@
-package com.adrian.viewpagerdatabinding.viewmodel;
+package com.adrian.viewpagerdatabinding.viewmodel.third;
 
 import android.databinding.Bindable;
 
@@ -9,7 +9,7 @@ import com.adrian.viewpagerdatabinding.viewmodel.base.RVViewModel;
  * Created by cadri on 2017. 04. 08..
  */
 
-public class SecondViewModel extends RVViewModel {
+public class ThirdViewModel extends RVViewModel {
 
     public String id;
 
@@ -17,7 +17,7 @@ public class SecondViewModel extends RVViewModel {
 
     public int layoutId;
 
-    public SecondViewModel(String id, String text, int layoutId) {
+    public ThirdViewModel(String id, String text, int layoutId) {
         this.id = id;
         this.text = text;
         this.layoutId = layoutId;
@@ -62,7 +62,7 @@ public class SecondViewModel extends RVViewModel {
 
     @Override
     public String toString() {
-        return "SecondViewModel{" +
+        return "ThirdViewModel{" +
                 "id='" + id + '\'' +
                 ", text='" + text + '\'' +
                 ", layoutId=" + layoutId +
