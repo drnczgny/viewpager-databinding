@@ -32,8 +32,8 @@ final class TestData {
     public static final List<DataModel> getRVDataModelForDifferentLayoutsList() {
         List<DataModel> list = new ArrayList<>();
         DataModel dataModel1 = new DataModel(new FirstViewModel("id1", "text1", R.layout.viewpager_item_layout_1));
-        DataModel dataModel2 = new DataModel(new ThirdViewModel("id2", "text2", R.layout.viewpager_item_layout_2));
-        DataModel dataModel3 = new DataModel(new SecondViewModel("id3", "text3", R.layout.viewpager_item_layout_3));
+        DataModel dataModel2 = new DataModel(new SecondViewModel("id2", "text2", R.layout.viewpager_item_layout_2));
+        DataModel dataModel3 = new DataModel(new ThirdViewModel("id3", "text3", R.layout.viewpager_item_layout_3));
         list.add(dataModel1);
         list.add(dataModel2);
         list.add(dataModel3);
