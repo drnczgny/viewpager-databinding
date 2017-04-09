@@ -25,9 +25,9 @@ import java.util.List;
  * Created by cadri on 2017. 03. 26..
  */
 
-public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
+public class ViewPagerWithDifferentLayoutsAdapter extends PagerAdapter {
 
-    private static final String TAG = TabsWithDifferentLayoutsAdapter.class.getName();
+    private static final String TAG = ViewPagerWithDifferentLayoutsAdapter.class.getName();
 
     private Context context;
 
@@ -37,7 +37,7 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
 
     private LayoutInflater layoutInflater;
 
-    public TabsWithDifferentLayoutsAdapter(Context context, List<DataModel> itemList, List<String> titleList) {
+    public ViewPagerWithDifferentLayoutsAdapter(Context context, List<DataModel> itemList, List<String> titleList) {
         this.context = context;
         this.itemList = itemList;
         this.titleList = titleList;
@@ -54,7 +54,7 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
             ViewpagerItemCommentsLayoutBinding viewpagerItemCommentsLayoutBinding = ViewpagerItemCommentsLayoutBinding.inflate(layoutInflater, collection, false);
             viewpagerItemCommentsLayoutBinding.rvComments.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
 
-            RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(TestData.getCommentItemViewModelList(), R.layout.item_layout1, BR.viewModel);
+            RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(TestData.getCommentItemViewModelList(), R.layout.item_comment_layout, BR.viewModel);
             viewpagerItemCommentsLayoutBinding.rvComments.setAdapter(recyclerViewAdapter);
 
 //            viewpagerItemCommentsLayoutBinding.executePendingBindings();

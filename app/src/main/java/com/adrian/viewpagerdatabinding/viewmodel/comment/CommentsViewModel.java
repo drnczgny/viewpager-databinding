@@ -1,6 +1,5 @@
 package com.adrian.viewpagerdatabinding.viewmodel.comment;
 
-import android.app.Activity;
 import android.databinding.Bindable;
 
 import com.adrian.viewpagerdatabinding.BR;
@@ -16,20 +15,15 @@ import java.util.List;
 
 public class CommentsViewModel extends RVViewModel {
 
-    private Activity activity;
-
     private List<CommentItemViewModel> commentItemViewModels = new ArrayList<>();
 
-    private int itemLayoutId = R.layout.item_layout1;
+    private int itemLayoutId = R.layout.item_comment_layout;
 
     private int layoutId;
 
     private int variableId = BR.viewModel;
 
-    private String simpleText = "simpleText";
-
-    public CommentsViewModel(Activity activity, List<CommentItemViewModel> commentItemViewModels, int layoutId) {
-        this.activity = activity;
+    public CommentsViewModel(List<CommentItemViewModel> commentItemViewModels, int layoutId) {
         this.commentItemViewModels = commentItemViewModels;
         this.layoutId = layoutId;
     }
@@ -65,16 +59,6 @@ public class CommentsViewModel extends RVViewModel {
     public void setVariableId(int variableId) {
         this.variableId = variableId;
         notifyPropertyChanged(BR.variableId);
-    }
-
-    @Bindable
-    public String getSimpleText() {
-        return simpleText;
-    }
-
-    public void setSimpleText(String simpleText) {
-        this.simpleText = simpleText;
-        notifyPropertyChanged(BR.simpleText);
     }
 
     @Bindable

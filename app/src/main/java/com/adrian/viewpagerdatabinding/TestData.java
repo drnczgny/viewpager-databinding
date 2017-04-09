@@ -72,7 +72,7 @@ final public class TestData {
         DataModel dataModel1 = new DataModel(new FirstViewModel("id1", "text1", R.layout.viewpager_item_layout_1));
         DataModel dataModel2 = new DataModel(new SecondViewModel("id2", "text2", R.layout.viewpager_item_layout_2));
         DataModel dataModel3 = new DataModel(new ThirdViewModel("id3", "text3", R.layout.viewpager_item_layout_3));
-        DataModel dataModel4 = new DataModel(new CommentsViewModel(activity, TestData.getCommentItemViewModelList(), R.layout.viewpager_item_comments_layout));
+        DataModel dataModel4 = new DataModel(new CommentsViewModel(TestData.getCommentItemViewModelList(), R.layout.viewpager_item_comments_layout));
         DataModel dataModel5 = new DataModel(new SimpleListViewModel("id5", Arrays.asList("one", "two", "three"), R.layout.viewpager_item_layout_5_recyclerview));
         list.add(dataModel1);
         list.add(dataModel2);

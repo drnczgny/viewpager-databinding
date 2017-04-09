@@ -6,7 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import com.adrian.viewpagerdatabinding.common.viewpager.adapter.TabsWithDifferentLayoutsAdapter;
+import com.adrian.viewpagerdatabinding.common.viewpager.adapter.ViewPagerWithDifferentLayoutsAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        viewPager.setAdapter(new TabsWithDifferentLayoutsAdapter(this, TestData.getRVDataModelForDifferentLayoutsList(this), TestData.getTitleList()));
+        viewPager.setAdapter(new ViewPagerWithDifferentLayoutsAdapter(this, TestData.getRVDataModelForDifferentLayoutsList(this), TestData.getTitleList()));
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
