@@ -16,7 +16,10 @@ public class CommentItemViewModel extends ListItemViewModel {
 
     public CommentItemViewModel(Comment comment) {
         this.comment = comment;
+
     }
+
+
 
     @Bindable
     public Integer getPostId() {
@@ -76,5 +79,12 @@ public class CommentItemViewModel extends ListItemViewModel {
     public void setComment(Comment comment) {
         this.comment = comment;
         notifyPropertyChanged(BR.comment);
+    }
+
+    @Override
+    public String toString() {
+        return "CommentItemViewModel{" +
+                "comment=" + comment +
+                '}';
     }
 }

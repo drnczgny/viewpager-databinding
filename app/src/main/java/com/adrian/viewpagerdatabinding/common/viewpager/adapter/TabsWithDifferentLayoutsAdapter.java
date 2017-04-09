@@ -4,13 +4,13 @@ import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v4.view.PagerAdapter;
-import android.util.Log;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.adrian.viewpagerdatabinding.databinding.ViewpagerItemLayout1Binding;
 import com.adrian.viewpagerdatabinding.common.viewpager.model.DataModel;
+import com.adrian.viewpagerdatabinding.databinding.ViewpagerItemCommentsLayoutBinding;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
 
     private List<DataModel> itemList;
 
-    LayoutInflater layoutInflater;
+    private LayoutInflater layoutInflater;
 
     public TabsWithDifferentLayoutsAdapter(Context context, List<DataModel> itemList, List<String> titleList) {
         this.context = context;
@@ -43,14 +43,14 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
         DataModel dataModel = itemList.get(position);
         ViewDataBinding binding = DataBindingUtil.inflate(layoutInflater, dataModel.getRvViewModel().getLayoutId(), collection, false);
 
-        Log.i(TAG, "viewModel: " + dataModel.getRvViewModel().toString());
-
-        ViewpagerItemLayout1Binding b = ViewpagerItemLayout1Binding.inflate(layoutInflater, collection, false);
+        // this is because of the RecyclerView
+        if(position == 3)  {
+            ViewpagerItemCommentsLayoutBinding viewpagerItemCommentsLayoutBinding = ViewpagerItemCommentsLayoutBinding.inflate(layoutInflater, collection, false);
+            viewpagerItemCommentsLayoutBinding.rvComments.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        }
 
         binding.setVariable(dataModel.getRvViewModel().getVariableId(), dataModel.getRvViewModel());
-
         collection.addView(binding.getRoot());
-
         return binding.getRoot();
     }
 
@@ -73,4 +73,6 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
     public CharSequence getPageTitle(int position) {
         return titleList.get(position);
     }
+
+
 }
