@@ -50,7 +50,6 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
         DataModel dataModel = itemList.get(position);
         ViewDataBinding binding = DataBindingUtil.inflate(layoutInflater, dataModel.getRvViewModel().getLayoutId(), collection, false);
 
-        // this is because of the RecyclerView
         if(position == 3)  {
             ViewpagerItemCommentsLayoutBinding viewpagerItemCommentsLayoutBinding = ViewpagerItemCommentsLayoutBinding.inflate(layoutInflater, collection, false);
             viewpagerItemCommentsLayoutBinding.rvComments.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
@@ -60,6 +59,7 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
 
 //            viewpagerItemCommentsLayoutBinding.executePendingBindings();
 
+            viewpagerItemCommentsLayoutBinding.setVariable(dataModel.getRvViewModel().getVariableId(), dataModel.getRvViewModel());
             collection.addView(viewpagerItemCommentsLayoutBinding.getRoot());
             return viewpagerItemCommentsLayoutBinding.getRoot();
         }
@@ -71,11 +71,12 @@ public class TabsWithDifferentLayoutsAdapter extends PagerAdapter {
             SimpleRecyclerViewAdapter simpleRecyclerViewAdapter = new SimpleRecyclerViewAdapter(context, Arrays.asList("one", "two", "three"));
             viewpagerItemLayout5RecyclerviewBinding.recyclerView.setAdapter(simpleRecyclerViewAdapter);
 
+            viewpagerItemLayout5RecyclerviewBinding.setVariable(dataModel.getRvViewModel().getVariableId(), dataModel.getRvViewModel());
             collection.addView(viewpagerItemLayout5RecyclerviewBinding.getRoot());
             return viewpagerItemLayout5RecyclerviewBinding.getRoot();
         }
 
-//        binding.setVariable(dataModel.getRvViewModel().getVariableId(), dataModel.getRvViewModel());
+        binding.setVariable(dataModel.getRvViewModel().getVariableId(), dataModel.getRvViewModel());
         collection.addView(binding.getRoot());
         return binding.getRoot();
     }
