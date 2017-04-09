@@ -16,10 +16,7 @@ public class CommentItemViewModel extends ListItemViewModel {
 
     public CommentItemViewModel(Comment comment) {
         this.comment = comment;
-
     }
-
-
 
     @Bindable
     public Integer getPostId() {

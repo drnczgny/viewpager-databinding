@@ -18,7 +18,7 @@ public final class CustomBindingAttributes {
 
     @BindingAdapter(value = {"listItems", "listItemLayout", "variableId"}, requireAll = true)
     public static void setupRecyclerViewAdapter(RecyclerView recyclerView, List<? extends ListItemViewModel> items, int itemLayout, int variableId) {
-//        RecyclerViewAdapter<T> recyclerViewAdapter = new RecyclerViewAdapter(items, itemLayout, variableId);
+//        SimpleRecyclerViewAdapter<T> recyclerViewAdapter = new SimpleRecyclerViewAdapter(items, itemLayout, variableId);
         RecyclerViewAdapter recyclerViewAdapter = getAdapter(recyclerView);
         recyclerViewAdapter.setItems(items);
         recyclerViewAdapter.setItemLayout(itemLayout);

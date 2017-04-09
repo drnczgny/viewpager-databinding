@@ -9,9 +9,11 @@ import com.adrian.viewpagerdatabinding.viewmodel.comment.CommentItemViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.comment.CommentsViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.first.FirstViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.second.SecondViewModel;
+import com.adrian.viewpagerdatabinding.viewmodel.simplelist.SimpleListViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.third.ThirdViewModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -26,11 +28,13 @@ final public class TestData {
         String title2 = "title2";
         String title3 = "title3";
         String title4 = "title4";
+        String title5 = "title5";
         List<String> list = new ArrayList<>();
         list.add(title1);
         list.add(title2);
         list.add(title3);
         list.add(title4);
+        list.add(title5);
         return list;
     }
 
@@ -69,10 +73,12 @@ final public class TestData {
         DataModel dataModel2 = new DataModel(new SecondViewModel("id2", "text2", R.layout.viewpager_item_layout_2));
         DataModel dataModel3 = new DataModel(new ThirdViewModel("id3", "text3", R.layout.viewpager_item_layout_3));
         DataModel dataModel4 = new DataModel(new CommentsViewModel(activity, TestData.getCommentItemViewModelList(), R.layout.viewpager_item_comments_layout));
+        DataModel dataModel5 = new DataModel(new SimpleListViewModel("id5", Arrays.asList("one", "two", "three"), R.layout.viewpager_item_layout_5_recyclerview));
         list.add(dataModel1);
         list.add(dataModel2);
         list.add(dataModel3);
         list.add(dataModel4);
+        list.add(dataModel5);
         return list;
     }
 }

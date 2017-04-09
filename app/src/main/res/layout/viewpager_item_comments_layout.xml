@@ -24,10 +24,7 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rvComments"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:listItemLayout="@{viewModel.layoutId}"
-            app:listItems="@{viewModel.commentItemViewModels}"
-            app:variableId="@{viewModel.variableId}" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
