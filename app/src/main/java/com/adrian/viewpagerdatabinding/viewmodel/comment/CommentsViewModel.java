@@ -17,11 +17,13 @@ public class CommentsViewModel extends RVViewModel {
 
     private List<CommentItemViewModel> commentItemViewModels = new ArrayList<>();
 
-    private int itemLayoutId = R.layout.item_comment_layout;
+    private int itemLayoutId = R.layout.rv_item_comment_layout;
 
     private int layoutId;
 
     private int variableId = BR.viewModel;
+
+    private CommentsHandler commentsHandler = new CommentsHandler(this);
 
     public CommentsViewModel(List<CommentItemViewModel> commentItemViewModels, int layoutId) {
         this.commentItemViewModels = commentItemViewModels;
@@ -69,5 +71,11 @@ public class CommentsViewModel extends RVViewModel {
     public void setItemLayoutId(int itemLayoutId) {
         this.itemLayoutId = itemLayoutId;
         notifyPropertyChanged(BR.itemLayoutId);
+    }
+
+
+
+    public CommentsHandler getCommentsHandler() {
+        return commentsHandler;
     }
 }

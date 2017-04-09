@@ -9,13 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.adrian.viewpagerdatabinding.BR;
-import com.adrian.viewpagerdatabinding.R;
-import com.adrian.viewpagerdatabinding.TestData;
-import com.adrian.viewpagerdatabinding.common.recyclerview.RecyclerViewAdapter;
 import com.adrian.viewpagerdatabinding.common.viewpager.model.DataModel;
 import com.adrian.viewpagerdatabinding.databinding.ViewpagerItemCommentsLayoutBinding;
 import com.adrian.viewpagerdatabinding.databinding.ViewpagerItemLayout5RecyclerviewBinding;
+import com.adrian.viewpagerdatabinding.viewmodel.comment.CommentsViewModel;
 import com.adrian.viewpagerdatabinding.viewmodel.simplelist.SimpleRecyclerViewAdapter;
 
 import java.util.Arrays;
@@ -54,12 +51,13 @@ public class ViewPagerWithDifferentLayoutsAdapter extends PagerAdapter {
             ViewpagerItemCommentsLayoutBinding viewpagerItemCommentsLayoutBinding = ViewpagerItemCommentsLayoutBinding.inflate(layoutInflater, collection, false);
             viewpagerItemCommentsLayoutBinding.rvComments.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
 
-            RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(TestData.getCommentItemViewModelList(), R.layout.item_comment_layout, BR.viewModel);
-            viewpagerItemCommentsLayoutBinding.rvComments.setAdapter(recyclerViewAdapter);
+//            RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(TestData.getCommentItemViewModelList(), R.layout.rv_item_comment_layout, BR.viewModel);
+//            viewpagerItemCommentsLayoutBinding.rvComments.setAdapter(recyclerViewAdapter);
 
 //            viewpagerItemCommentsLayoutBinding.executePendingBindings();
 
             viewpagerItemCommentsLayoutBinding.setVariable(dataModel.getRvViewModel().getVariableId(), dataModel.getRvViewModel());
+            viewpagerItemCommentsLayoutBinding.setHandler(((CommentsViewModel) dataModel.getRvViewModel()).getCommentsHandler());
             collection.addView(viewpagerItemCommentsLayoutBinding.getRoot());
             return viewpagerItemCommentsLayoutBinding.getRoot();
         }

@@ -58,12 +58,36 @@ final public class TestData {
         comment3.setName("name3");
         comment3.setEmail("email3");
         comment3.setBody("body3");
+        Comment comment4 = new Comment();
+        comment4.setId(4);
+        comment4.setPostId(4);
+        comment4.setName("name4");
+        comment4.setEmail("email4");
+        comment4.setBody("body4");
+        Comment comment5 = new Comment();
+        comment5.setId(5);
+        comment5.setPostId(5);
+        comment5.setName("name5");
+        comment5.setEmail("email5");
+        comment5.setBody("body5");
+        Comment comment6 = new Comment();
+        comment6.setId(6);
+        comment6.setPostId(6);
+        comment6.setName("name6");
+        comment6.setEmail("email6");
+        comment6.setBody("body6");
         CommentItemViewModel commentItemViewModel1 = new CommentItemViewModel(comment1);
         CommentItemViewModel commentItemViewModel2 = new CommentItemViewModel(comment2);
         CommentItemViewModel commentItemViewModel3 = new CommentItemViewModel(comment3);
+        CommentItemViewModel commentItemViewModel4 = new CommentItemViewModel(comment4);
+        CommentItemViewModel commentItemViewModel5 = new CommentItemViewModel(comment5);
+        CommentItemViewModel commentItemViewModel6 = new CommentItemViewModel(comment6);
         list.add(commentItemViewModel1);
         list.add(commentItemViewModel2);
         list.add(commentItemViewModel3);
+        list.add(commentItemViewModel4);
+        list.add(commentItemViewModel5);
+        list.add(commentItemViewModel6);
         return list;
     }
 

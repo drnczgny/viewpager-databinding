@@ -29,7 +29,7 @@ public class SimpleRecyclerViewAdapter extends RecyclerView.Adapter<SimpleRecycl
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_item_simple_string, parent, false);
 
         return new MyViewHolder(itemView);
     }
